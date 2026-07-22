@@ -1,11 +1,9 @@
 # SaaS Template
 
-[![CI](https://github.com/SEU_USUARIO/SEU_REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/SEU_USUARIO/SEU_REPO/actions/workflows/ci.yml)
+[![CI](https://github.com/leandroaps/sass-template/actions/workflows/ci.yml/badge.svg)](https://github.com/SEU_USUARIO/SEU_REPO/actions/workflows/ci.yml)
 ![Next.js 15](https://img.shields.io/badge/Next.js-15-black)
 ![TypeScript strict](https://img.shields.io/badge/TypeScript-strict-3178c6)
 ![Node](https://img.shields.io/badge/Node-%E2%89%A522-339933)
-
-> Troque `SEU_USUARIO/SEU_REPO` acima pelo caminho real do seu repositório assim que publicar — o badge de CI só funciona depois disso.
 
 Template base, pronto para produção, para aplicações SaaS: **Next.js fullstack**, **TypeScript**, **PostgreSQL (Drizzle ORM)**, autenticação, i18n, **Playwright**, **Docker** e **GitHub Actions** já configurados e conversando entre si.
 
