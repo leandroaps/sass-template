@@ -1,0 +1,97 @@
+{
+  "Layout": {
+    "title": "SaaS Template",
+    "description": "Base Next.js + PostgreSQL + Playwright + Docker"
+  },
+  "Home": {
+    "tagline": "Next.js fullstack · TypeScript · PostgreSQL · Playwright · Docker",
+    "dbLabel": "Banco de dados:",
+    "dbConnected": "conectado",
+    "dbUnavailable": "indisponível",
+    "healthcheck": "Healthcheck da API em"
+  },
+  "Stack": {
+    "title": "Stack técnica",
+    "items": {
+      "nextjs": {
+        "name": "Next.js 15",
+        "description": "App Router, Server Components, build standalone para Docker"
+      },
+      "tailwind": {
+        "name": "Tailwind CSS v4",
+        "description": "Utilitários, configuração 100% em CSS via @theme"
+      },
+      "nextIntl": {
+        "name": "next-intl",
+        "description": "Rotas por locale (pt-BR, en) com middleware e catálogos de mensagens"
+      },
+      "tanstackQuery": {
+        "name": "TanStack Query",
+        "description": "Cache, refetch e mutações de dados no lado do cliente"
+      },
+      "typescript": {
+        "name": "TypeScript strict",
+        "description": "noUncheckedIndexedAccess ligado — segurança máxima de tipos"
+      },
+      "drizzle": {
+        "name": "PostgreSQL + Drizzle ORM",
+        "description": "Queries 100% tipadas, migrations versionadas em SQL"
+      },
+      "zod": {
+        "name": "Zod",
+        "description": "Valida variáveis de ambiente no boot e payloads das rotas"
+      },
+      "playwright": {
+        "name": "Playwright",
+        "description": "Testes E2E de UI e de API no mesmo runner"
+      },
+      "docker": {
+        "name": "Docker multi-stage",
+        "description": "Imagem final enxuta, roda como usuário não-root"
+      },
+      "githubActions": {
+        "name": "GitHub Actions",
+        "description": "Lint → Typecheck → E2E → build/push automatizados"
+      }
+    }
+  },
+  "Toast": {
+    "recheckButton": "Verificar conexão novamente",
+    "healthCheckSuccess": "Conexão com o banco confirmada",
+    "healthCheckError": "Não foi possível conectar ao banco",
+    "todoCreated": "Tarefa criada",
+    "genericError": "Algo deu errado, tente novamente",
+    "accountCreated": "Conta criada com sucesso",
+    "signedOut": "Sessão encerrada",
+    "invalidCredentials": "E-mail ou senha inválidos"
+  },
+  "Auth": {
+    "signUpTitle": "Criar conta",
+    "signInTitle": "Entrar",
+    "nameLabel": "Nome",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Senha",
+    "signUpButton": "Criar conta",
+    "signInButton": "Entrar",
+    "noAccount": "Não tem uma conta?",
+    "haveAccount": "Já tem uma conta?",
+    "signUpLink": "Criar conta",
+    "signInLink": "Entrar"
+  },
+  "Account": {
+    "title": "Minha conta",
+    "emailLabel": "E-mail",
+    "organizationLabel": "Organização",
+    "signOutButton": "Sair"
+  },
+  "Todos": {
+    "title": "Lista de tarefas",
+    "titlePlaceholder": "Nova tarefa",
+    "addButton": "Adicionar",
+    "loading": "Carregando...",
+    "empty": "Nenhuma tarefa ainda"
+  },
+  "Footer": {
+    "tagline": "SaaS Template · Next.js + Drizzle + Tailwind"
+  }
+}

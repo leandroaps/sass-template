@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ${DB_NAME:-saas_dev}
+    ports:
+      # Porta publicada na sua máquina — configure DB_PORT no .env
+      # para rodar vários projetos lado a lado (5432, 5433, 5434...)
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build: .
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    environment:
+      # Dentro da rede do compose o app fala com o banco via hostname
+      # "db" na porta interna 5432 — DB_PORT não interfere aqui.
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/${DB_NAME:-saas_dev}
+      # Obrigatório (Better Auth) — defina no seu .env, veja .env.example
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET}
+      # URL pública que o navegador usa para acessar o app — precisa bater
+      # com a porta publicada acima (APP_PORT), senão o Better Auth rejeita
+      # a origem da requisição ("Invalid origin").
+      BASE_URL: ${BASE_URL:-http://localhost:3000}
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

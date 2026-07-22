@@ -1,0 +1,97 @@
+{
+  "Layout": {
+    "title": "SaaS Template",
+    "description": "Next.js + PostgreSQL + Playwright + Docker base"
+  },
+  "Home": {
+    "tagline": "Next.js fullstack · TypeScript · PostgreSQL · Playwright · Docker",
+    "dbLabel": "Database:",
+    "dbConnected": "connected",
+    "dbUnavailable": "unavailable",
+    "healthcheck": "API healthcheck at"
+  },
+  "Stack": {
+    "title": "Tech stack",
+    "items": {
+      "nextjs": {
+        "name": "Next.js 15",
+        "description": "App Router, Server Components, standalone build for Docker"
+      },
+      "tailwind": {
+        "name": "Tailwind CSS v4",
+        "description": "Utility classes, 100% CSS-first config via @theme"
+      },
+      "nextIntl": {
+        "name": "next-intl",
+        "description": "Locale-based routing (pt-BR, en) with middleware and message catalogs"
+      },
+      "tanstackQuery": {
+        "name": "TanStack Query",
+        "description": "Client-side caching, refetching, and mutations"
+      },
+      "typescript": {
+        "name": "TypeScript strict",
+        "description": "noUncheckedIndexedAccess enabled — maximum type safety"
+      },
+      "drizzle": {
+        "name": "PostgreSQL + Drizzle ORM",
+        "description": "Fully typed queries, versioned SQL migrations"
+      },
+      "zod": {
+        "name": "Zod",
+        "description": "Validates environment variables at boot and route payloads"
+      },
+      "playwright": {
+        "name": "Playwright",
+        "description": "UI and API end-to-end tests in the same runner"
+      },
+      "docker": {
+        "name": "Docker multi-stage",
+        "description": "Lean final image, runs as a non-root user"
+      },
+      "githubActions": {
+        "name": "GitHub Actions",
+        "description": "Automated lint → typecheck → E2E → build/push"
+      }
+    }
+  },
+  "Toast": {
+    "recheckButton": "Recheck connection",
+    "healthCheckSuccess": "Database connection confirmed",
+    "healthCheckError": "Could not connect to the database",
+    "todoCreated": "Todo created",
+    "genericError": "Something went wrong, please try again",
+    "accountCreated": "Account created successfully",
+    "signedOut": "Signed out",
+    "invalidCredentials": "Invalid email or password"
+  },
+  "Auth": {
+    "signUpTitle": "Create account",
+    "signInTitle": "Sign in",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "signUpButton": "Create account",
+    "signInButton": "Sign in",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "signUpLink": "Create account",
+    "signInLink": "Sign in"
+  },
+  "Account": {
+    "title": "My account",
+    "emailLabel": "Email",
+    "organizationLabel": "Organization",
+    "signOutButton": "Sign out"
+  },
+  "Todos": {
+    "title": "Todo list",
+    "titlePlaceholder": "New task",
+    "addButton": "Add",
+    "loading": "Loading…",
+    "empty": "No tasks yet"
+  },
+  "Footer": {
+    "tagline": "SaaS Template · Next.js + Drizzle + Tailwind"
+  }
+}
