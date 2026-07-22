@@ -42,7 +42,7 @@ test.describe("Home", () => {
     page,
   }) => {
     await page.goto("/pt-BR");
-    await page.getByRole("link", { name: "EN" }).click();
+    await page.getByRole("link", { name: "EN", exact: true }).click();
     await expect(page).toHaveURL(/\/en\/?$/);
     await expect(page.getByTestId("db-status")).toHaveText("connected");
   });
