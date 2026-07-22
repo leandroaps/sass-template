@@ -15,6 +15,11 @@ export default defineConfig({
     baseURL,
     trace: "on-first-retry",
     screenshot: "only-on-failure",
+    // Fixa o locale do navegador: o header Accept-Language varia por
+    // ambiente (ex.: runners do GitHub Actions enviam "en-US"), o que
+    // faz o next-intl negociar para /en e quebra o teste de redirect
+    // para o locale padrão (pt-BR) de forma não-determinística.
+    locale: "pt-BR",
   },
   projects: [
     { name: "chromium", use: { ...devices["Desktop Chrome"] } },
