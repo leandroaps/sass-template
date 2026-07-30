@@ -1,23 +1,16 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-// eslint-config-next@15.x predates flat config's subpath-exports convention —
-// it's still authored as a legacy `extends`-style shareable config (no
-// `./typescript` or `./core-web-vitals` export exists on this version), so it
-// has to be bridged into flat config via FlatCompat rather than imported
-// directly.
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+// eslint-config-next@16.x ships native flat config under the
+// `/core-web-vitals` and `/typescript` subpath exports — no FlatCompat
+// bridge needed anymore (bridging these already-flat configs through
+// FlatCompat.extends(...), the 15.x-era workaround, crashes under 16.x).
 
 /** @type {import('eslint').Linter.Config[]} */
 const eslintConfig = [
   { ignores: [".next/**", "node_modules/**", "playwright-report/**", "test-results/**"] },
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...nextCoreWebVitals,
+  ...nextTypescript,
   {
     rules: {
       // Convention: an unused function/arg named with a leading underscore is

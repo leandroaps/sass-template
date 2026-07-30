@@ -1,7 +1,7 @@
 # SaaS Template
 
 [![CI](https://github.com/leandroaps/sass-template/actions/workflows/ci.yml/badge.svg)](https://github.com/SEU_USUARIO/SEU_REPO/actions/workflows/ci.yml)
-![Next.js 15](https://img.shields.io/badge/Next.js-15-black)
+![Next.js 16](https://img.shields.io/badge/Next.js-16-black)
 ![TypeScript strict](https://img.shields.io/badge/TypeScript-strict-3178c6)
 ![Node](https://img.shields.io/badge/Node-%E2%89%A522-339933)
 
@@ -18,7 +18,7 @@ A ideia é clonar, rodar um punhado de comandos e já ter: banco com migrations 
 
 | Camada                       | Tecnologia                  | Por quê                                                                                          |
 | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------ |
-| Framework                    | Next.js 15 (App Router)     | Front + API no mesmo deploy, RSC, `output: standalone` para Docker enxuto                        |
+| Framework                    | Next.js 16 (App Router)     | Front + API no mesmo deploy, RSC, `output: standalone` para Docker enxuto                        |
 | Estilização                  | Tailwind CSS v4             | Utility-first, config via CSS (`@theme` em `globals.css`), zero `tailwind.config.js`             |
 | i18n                         | next-intl                   | Rotas por locale (`/pt-BR`, `/en`), middleware resolve o idioma, strings em `src/i18n/messages/` |
 | Estado de servidor (cliente) | TanStack Query              | Cache/refetch/mutations para listas interativas; provider em `src/components/query-provider.tsx` |
@@ -234,7 +234,7 @@ src/
   lib/auth.ts     # Better Auth (Drizzle adapter), getSession/requireSessionOrRedirect
   lib/auth-client.ts # cliente React do Better Auth (signIn/signUp/signOut/useSession)
   components/     # Componentes de cliente (locale-switcher.tsx, query-provider.tsx, health-check-button.tsx, todo-form.tsx, auth-nav.tsx, sign-out-button.tsx)
-middleware.ts     # Resolve o locale (cookie → Accept-Language → pt-BR)
+proxy.ts          # Resolve o locale (cookie → Accept-Language → pt-BR)
 e2e/              # Testes Playwright (UI + API)
 drizzle/          # Migrations SQL versionadas
 scripts/          # migrate.ts (local, CI e container)

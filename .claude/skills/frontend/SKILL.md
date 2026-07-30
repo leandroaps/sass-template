@@ -135,7 +135,7 @@ component. Catalogs live in `src/i18n/messages/{locale}.json` (`pt-BR` and `en` 
   calling `useLocale()` in a new Client Component — one less hook depending on the
   provider being present correctly, and the Server Component already has `locale` from
   `params`.
-- `src/app/api/**` is explicitly excluded from locale routing (see `middleware.ts`'s
+- `src/app/api/**` is explicitly excluded from locale routing (see `src/proxy.ts`'s
   matcher) and its response strings are out of scope for i18n — don't route API
   strings through the message catalogs.
 
