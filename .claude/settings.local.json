@@ -55,7 +55,10 @@
       "Bash(tar xzf *)",
       "Bash(NODE_OPTIONS=\"\" npm install --save-dev @eslint/compat)",
       "Bash(NODE_OPTIONS=\"\" npm run typecheck)",
-      "Bash(NODE_OPTIONS=\"\" DATABASE_URL=\"postgresql://fake:fake@localhost:5432/fake\" BETTER_AUTH_SECRET=\"a-fake-secret-that-is-at-least-32-chars-long\" BASE_URL=\"http://localhost:3000\" npm run build)"
+      "Bash(NODE_OPTIONS=\"\" DATABASE_URL=\"postgresql://fake:fake@localhost:5432/fake\" BETTER_AUTH_SECRET=\"a-fake-secret-that-is-at-least-32-chars-long\" BASE_URL=\"http://localhost:3000\" npm run build)",
+      "Bash(npx opennextjs-cloudflare *)",
+      "WebSearch",
+      "WebFetch(domain:opennext.js.org)"
     ]
   }
 }

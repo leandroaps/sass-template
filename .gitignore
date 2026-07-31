@@ -1,6 +1,8 @@
 node_modules/
 .next/
 out/
+.open-next/
+.wrangler/
 .env
 .env*.local
 playwright-report/
