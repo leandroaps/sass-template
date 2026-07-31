@@ -26,16 +26,7 @@ function shimLegacyPlugins(configs) {
 
 /** @type {import('eslint').Linter.Config[]} */
 const eslintConfig = [
-  {
-    ignores: [
-      ".next/**",
-      ".open-next/**",
-      ".wrangler/**",
-      "node_modules/**",
-      "playwright-report/**",
-      "test-results/**",
-    ],
-  },
+  { ignores: [".next/**", "node_modules/**", "playwright-report/**", "test-results/**"] },
   ...shimLegacyPlugins(nextCoreWebVitals),
   ...shimLegacyPlugins(nextTypescript),
   {
